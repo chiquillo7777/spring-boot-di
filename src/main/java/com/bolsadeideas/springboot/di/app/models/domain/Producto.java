@@ -1,10 +1,14 @@
 package com.bolsadeideas.springboot.di.app.models.domain;
 
-import org.springframework.stereotype.Component;
-
 
 public class Producto {
 
+	
+	public Producto(String nombre, Integer precio) {
+		
+		this.nombre = nombre;
+		this.precio = precio;
+	}
 	private String nombre;
 	private Integer precio;
 	public String getNombre() {

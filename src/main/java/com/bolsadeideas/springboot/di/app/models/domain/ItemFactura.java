@@ -1,9 +1,17 @@
 package com.bolsadeideas.springboot.di.app.models.domain;
 
 public class ItemFactura {
+	
 
+	public ItemFactura(Producto producto, Integer cantidad) {
+		
+		this.producto = producto;
+		this.cantidad = cantidad;
+	}
+	
 	private Producto producto;
 	private Integer cantidad;
+	
 	public Producto getProducto() {
 		return producto;
 	}
@@ -15,6 +23,10 @@ public class ItemFactura {
 	}
 	public void setCantidad(Integer cantidad) {
 		this.cantidad = cantidad;
+	}
+	
+	public Integer calcularImporte() {
+		return cantidad * producto.getPrecio();
 	}
 
 }
