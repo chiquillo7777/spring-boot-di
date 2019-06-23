@@ -40,6 +40,7 @@ public class AppConfig {
 	}
 	
 	@Bean("itemsFacturaOficina")
+	@Primary
 	public List<ItemFactura> registrarItemsOficina(){
 		
 		Producto producto1 = new Producto("MOnitor LG LCD 24", 250);
